@@ -1,0 +1,36 @@
+@import "@fontsource-variable/montserrat";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --midnight: #081020;
+  --gold: #d4a53a;
+  --canvas: #f4f6fa;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--canvas);
+  color: #0b1426;
+  font-family: "Montserrat Variable", Montserrat, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 2px; border-radius: 6px; }
+.on-dark :focus-visible { outline-color: #f2ce6b; }
+
+@layer components {
+  .card { @apply rounded-2xl bg-white shadow-card border border-slate-100; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-gold { @apply bg-gold-gradient text-midnight hover:brightness-95; }
+  .btn-dark { @apply bg-midnight text-white hover:bg-midnight-700; }
+  .btn-ghost { @apply border border-slate-300 bg-white text-slate-800 hover:bg-slate-50; }
+  .btn-danger { @apply border border-red-300 bg-white text-red-800 hover:bg-red-50; }
+  .field { @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-500; }
+  .label { @apply mb-1 block text-xs font-semibold text-slate-700; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
