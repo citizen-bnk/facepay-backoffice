@@ -9,7 +9,7 @@ export const metadata: Metadata = { title: "Sign in" };
 export default function LoginPage() {
   const users = DEMO_USERS.map((u) => ({ email: u.email, name: u.name, role: ROLE_LABEL[u.role], blurb: u.blurb }));
   return (
-    <div className="on-dark relative min-h-screen bg-midnight text-white">
+    <div className="portal-login-photo on-dark relative min-h-screen bg-midnight text-white">
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,165,58,0.18),transparent_55%)]" />
       <main id="main" className="relative mx-auto grid min-h-screen max-w-6xl items-center gap-10 px-4 py-10 lg:grid-cols-2">
         <div>

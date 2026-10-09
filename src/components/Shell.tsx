@@ -51,9 +51,9 @@ export default function Shell({ portal, title, subtitle, nav, user, switchTo, re
   );
 
   const sidebar = (
-    <div className="on-dark flex h-full flex-col bg-gradient-to-b from-[#0D1A30] to-midnight text-white">
+    <div className="portal-sidebar on-dark flex h-full flex-col bg-gradient-to-b from-[#0D1A30] to-midnight text-white">
       <div className="px-5 pb-3 pt-5">
-        <Image src="/logo-full.png" alt="FacePay" width={150} height={40} className="h-9 w-auto" priority />
+        <Image src="/logo-full.png" alt="FacePay" width={150} height={40} className="h-8 w-auto" priority />
         <p className="mt-1 text-[11px] font-medium text-slate-300">{subtitle}</p>
       </div>
       {links}
@@ -69,7 +69,7 @@ export default function Shell({ portal, title, subtitle, nav, user, switchTo, re
   );
 
   return (
-    <div className="min-h-screen lg:grid lg:grid-cols-[232px_1fr]">
+    <div className="min-h-screen lg:grid lg:grid-cols-[208px_1fr]">
       <aside className="sticky top-0 hidden h-screen lg:block">{sidebar}</aside>
 
       {open && (
@@ -80,7 +80,7 @@ export default function Shell({ portal, title, subtitle, nav, user, switchTo, re
       )}
 
       <div className="min-w-0">
-        <header className="sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-slate-200 bg-white px-4 sm:px-6">
+        <header className="sticky top-0 z-30 flex h-14 items-center gap-3 border-b border-slate-200 bg-white px-4 sm:px-6">
           <button className="rounded-lg p-2 text-midnight hover:bg-slate-100 lg:hidden" aria-label="Open menu" aria-expanded={open} onClick={() => setOpen(true)}>
             <Icon name="menu" />
           </button>
@@ -96,9 +96,9 @@ export default function Shell({ portal, title, subtitle, nav, user, switchTo, re
           <button className="rounded-lg p-2 text-slate-700 hover:bg-slate-100" aria-label="Notifications"><Icon name="bell" /></button>
           <details className="relative">
             <summary className="flex cursor-pointer list-none items-center gap-2 rounded-lg p-1 hover:bg-slate-100" aria-label={`Account menu for ${user.name}`}>
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-gold-gradient text-xs font-bold text-midnight">{user.initials}</span>
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-gold-gradient text-xs font-bold text-midnight">{user.initials}</span>
               <span className="hidden text-left leading-tight sm:block">
-                <span className="block text-sm font-semibold text-midnight">{user.name}</span>
+                <span className="block text-xs font-semibold text-midnight">{user.name}</span>
                 <span className="block text-[11px] text-slate-600">{user.roleLabel}</span>
               </span>
               <Icon name="down" className="h-4 w-4 text-slate-600" />
@@ -111,7 +111,7 @@ export default function Shell({ portal, title, subtitle, nav, user, switchTo, re
             </div>
           </details>
         </header>
-        <main id="main" className="mx-auto max-w-[1280px] px-4 py-6 sm:px-6" tabIndex={-1}>
+        <main id="main" className="mx-auto max-w-[1280px] px-4 py-5 sm:px-5" tabIndex={-1}>
           {children}
           <footer className="mt-10 border-t border-slate-200 pt-4 text-xs text-slate-600">
             FACEPAY | FACE YOUR MONEY. {dataSource} Balances shown are sourced from the named provider; FacePay does not hold funds. No raw biometric data is ever displayed.

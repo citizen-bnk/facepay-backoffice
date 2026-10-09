@@ -27,7 +27,7 @@ async function overview(s: Session) {
     <>
       <div className="grid gap-5 xl:grid-cols-[1.35fr_1fr]">
         <div className="space-y-5">
-          <h1 className="rounded-xl bg-slate-100 px-5 py-3 text-lg font-bold text-midnight">My Money</h1>
+          <h1 className="rounded-lg bg-slate-100 px-4 py-3 text-lg font-bold text-midnight">My Money</h1>
           <Card>
             <div className="flex items-start justify-between">
               <div>
@@ -47,7 +47,7 @@ async function overview(s: Session) {
           <Card title="Recent Transactions" id="recent" right={<Link href="/customer/payments" className="text-xs font-semibold text-blue-800 underline">View all</Link>}>
             <ul className="divide-y divide-slate-100">
               {w.recent.slice(0, 4).map((t, i) => (
-                <li key={t.id} className="flex items-center gap-3 py-3.5">
+                <li key={t.id} className="flex items-center gap-3 py-3">
                   <span className={`grid h-8 w-8 place-items-center rounded-lg text-xs font-bold ${AVATAR[i % 4]}`} aria-hidden>{t.merchantName[0]}</span>
                   <span className="flex-1 text-sm font-semibold text-slate-900">{t.merchantName}</span>
                   <span className="text-right">
@@ -60,10 +60,10 @@ async function overview(s: Session) {
           </Card>
         </div>
         <div className="space-y-5">
-          <section className="on-dark relative overflow-hidden rounded-2xl bg-gradient-to-br from-ink via-midnight-800 to-[#3a2b0c] p-6 text-white shadow-card" aria-labelledby="getmore">
+          <section className="portal-customer-promo on-dark relative overflow-hidden rounded-lg p-6 text-white shadow-card" aria-labelledby="getmore">
             <div aria-hidden className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-gold/30 blur-3xl" />
             <h2 id="getmore" className="relative text-lg font-bold">Get More with FacePay</h2>
-            <p className="relative mt-2 max-w-xs text-sm text-slate-200">Use your face to pay everywhere. Fast. Secure. Rewarding.</p>
+            <p className="relative mt-2 max-w-xs text-xs text-slate-200">Use your face to pay everywhere. Fast. Secure. Rewarding.</p>
             <Link href="/customer/consent" className="relative mt-5 inline-block rounded-lg border border-gold/60 px-4 py-2 text-xs font-semibold text-gold-light hover:bg-white/10">Learn More</Link>
           </section>
           <Card title="Your Cards" id="cards">

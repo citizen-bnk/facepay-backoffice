@@ -1,4 +1,5 @@
 @import "@fontsource-variable/montserrat";
+@import "@fontsource-variable/inter";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +14,7 @@ html { -webkit-text-size-adjust: 100%; }
 body {
   background: var(--canvas);
   color: #0b1426;
-  font-family: "Montserrat Variable", Montserrat, system-ui, sans-serif;
+  font-family: "Inter Variable", Inter, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -21,7 +22,7 @@ body {
 .on-dark :focus-visible { outline-color: #f2ce6b; }
 
 @layer components {
-  .card { @apply rounded-2xl bg-white shadow-card border border-slate-100; }
+  .card { @apply rounded-lg bg-white shadow-card border border-slate-100; }
   .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50; }
   .btn-gold { @apply bg-gold-gradient text-midnight hover:brightness-95; }
   .btn-dark { @apply bg-midnight text-white hover:bg-midnight-700; }
@@ -34,3 +35,5 @@ body {
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+h1,h2,h3{font-family:"Montserrat Variable",Montserrat,sans-serif}.card{box-shadow:0 2px 8px #14263805}.portal-sidebar{background:linear-gradient(145deg,#0c1821,#030c12)!important}.portal-customer-promo{background:linear-gradient(90deg,#030c16ee,#030c1699),url('/media/hero.webp') 80% center/cover}.portal-visa{background:linear-gradient(130deg,#030a11,#141714 65%,#2c2310)}.portal-visa::before{content:'';position:absolute;width:160%;height:90%;left:-30%;top:55%;border-top:1px solid #d9ae52;border-radius:50%;transform:rotate(-12deg);box-shadow:0 -5px 0 #d9ae5233,0 -10px 0 #d9ae5226,0 -15px 0 #d9ae521a}.portal-visa>*{position:relative}.portal-login-photo{background:linear-gradient(90deg,#030c16f5,#030c16c9 55%,#030c1677),url('/media/merchant.webp') center/cover}.portal-sidebar nav a{font-size:12px}.portal-sidebar nav svg{width:16px;height:16px}

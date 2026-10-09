@@ -27,7 +27,7 @@ export function PeriodPill({ label }: { label: string }) {
 export function Card({ title, right, children, className = "", id }: { title?: string; right?: ReactNode; children: ReactNode; className?: string; id?: string }) {
   const hid = id ? `${id}-h` : undefined;
   return (
-    <section className={`card p-5 ${className}`} aria-labelledby={hid}>
+    <section className={`card p-4 ${className}`} aria-labelledby={hid}>
       {(title || right) && (
         <div className="mb-3 flex items-center justify-between gap-2">
           {title && <h2 id={hid} className="text-sm font-bold text-midnight">{title}</h2>}
@@ -41,7 +41,7 @@ export function Card({ title, right, children, className = "", id }: { title?: s
 
 export function Delta({ value, good = true }: { value: string; good?: boolean }) {
   return (
-    <span className={`inline-flex items-center gap-1 text-sm font-semibold ${good ? "text-green-700" : "text-red-700"}`}>
+    <span className={`inline-flex items-center gap-1 text-xs font-semibold ${good ? "text-green-700" : "text-red-700"}`}>
       <Icon name="up" className={`h-4 w-4 ${good ? "" : "rotate-180"}`} />
       <span>{value}<span className="sr-only">{good ? " improvement" : " needs attention"}</span></span>
     </span>
@@ -50,9 +50,9 @@ export function Delta({ value, good = true }: { value: string; good?: boolean })
 
 export function KpiCard({ kpi }: { kpi: Kpi }) {
   return (
-    <div className="card p-5">
+    <div className="card p-4">
       <p className="text-xs font-medium text-slate-600">{kpi.label}</p>
-      <p className="mt-2 text-2xl font-bold tracking-tight text-midnight">{kpi.value}</p>
+      <p className="mt-2 text-[23px] font-bold tracking-tight text-midnight">{kpi.value}</p>
       {kpi.delta && <div className="mt-2"><Delta value={kpi.delta} good={kpi.good} /></div>}
     </div>
   );
@@ -138,17 +138,17 @@ export function Stat({ label, value, sub }: { label: string; value: ReactNode; s
 
 export function VisaCard({ last4 = "1234", className = "" }: { last4?: string; className?: string }) {
   return (
-    <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#14233F] to-ink p-5 text-white shadow-card ${className}`} role="img" aria-label={`FacePay virtual Visa card ending ${last4}`}>
+    <div className={`portal-visa relative overflow-hidden rounded-xl p-5 text-white shadow-card ${className}`} role="img" aria-label={`FacePay virtual Visa card ending ${last4}`}>
       <div className="flex items-center justify-between">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/logo-full.png" alt="" className="h-7 w-auto" />
         <span className="rounded bg-gold-gradient px-1.5 py-0.5 text-[10px] font-bold text-midnight">NFC</span>
       </div>
       <p className="mt-1 text-[10px] uppercase tracking-widest text-slate-300">Virtual Card</p>
-      <p className="mt-6 text-lg tracking-[0.25em]">•••• •••• •••• {last4}</p>
+      <p className="mt-6 text-lg tracking-[0.25em] text-gold-light">•••• •••• •••• {last4}</p>
       <div className="mt-3 flex items-end justify-between">
         <span className="text-xs text-slate-300">Thabo Mokoena</span>
-        <span className="text-2xl font-black italic tracking-tight">VISA</span>
+        <span className="text-2xl text-gold-light font-black italic tracking-tight">VISA</span>
       </div>
     </div>
   );
