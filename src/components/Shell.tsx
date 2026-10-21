@@ -53,7 +53,7 @@ export default function Shell({ portal, title, subtitle, nav, user, switchTo, re
   const sidebar = (
     <div className="portal-sidebar on-dark flex h-full flex-col bg-gradient-to-b from-[#0D1A30] to-midnight text-white">
       <div className="px-5 pb-3 pt-5">
-        <Image src="/logo-full.png" alt="FacePay" width={150} height={40} className="h-8 w-auto" priority />
+        <Image src="/brand/facepay_logo_compact_dark.png" alt="FacePay" width={169} height={32} className="h-8 w-auto" priority />
         <p className="mt-1 text-[11px] font-medium text-slate-300">{subtitle}</p>
       </div>
       {links}

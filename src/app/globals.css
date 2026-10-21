@@ -1,12 +1,15 @@
-@import "@fontsource-variable/montserrat";
-@import "@fontsource-variable/inter";
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/500.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
+@import '@fontsource/poppins/800.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --midnight: #081020;
-  --gold: #d4a53a;
+  --midnight: #0E1A2B;
+  --gold: #D4AF37;
   --canvas: #f4f6fa;
 }
 
@@ -14,7 +17,7 @@ html { -webkit-text-size-adjust: 100%; }
 body {
   background: var(--canvas);
   color: #0b1426;
-  font-family: "Inter Variable", Inter, system-ui, sans-serif;
+  font-family: 'Poppins', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -36,4 +39,14 @@ body {
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
-h1,h2,h3{font-family:"Montserrat Variable",Montserrat,sans-serif}.card{box-shadow:0 2px 8px #14263805}.portal-sidebar{background:linear-gradient(145deg,#0c1821,#030c12)!important}.portal-customer-promo{background:linear-gradient(90deg,#030c16ee,#030c1699),url('/media/hero.webp') 80% center/cover}.portal-visa{background:linear-gradient(130deg,#030a11,#141714 65%,#2c2310)}.portal-visa::before{content:'';position:absolute;width:160%;height:90%;left:-30%;top:55%;border-top:1px solid #d9ae52;border-radius:50%;transform:rotate(-12deg);box-shadow:0 -5px 0 #d9ae5233,0 -10px 0 #d9ae5226,0 -15px 0 #d9ae521a}.portal-visa>*{position:relative}.portal-login-photo{background:linear-gradient(90deg,#030c16f5,#030c16c9 55%,#030c1677),url('/media/merchant.webp') center/cover}.portal-sidebar nav a{font-size:12px}.portal-sidebar nav svg{width:16px;height:16px}
+h1,h2,h3{font-family:'Poppins',sans-serif}.card{box-shadow:0 2px 8px #14263805}.portal-sidebar{background:linear-gradient(145deg,#0c1821,#030c12)!important}.portal-customer-promo{background:linear-gradient(90deg,#030c16ee,#030c1699),url('/media/hero.webp') 80% center/cover}.portal-visa{background:linear-gradient(130deg,#030a11,#141714 65%,#2c2310)}.portal-visa::before{content:'';position:absolute;width:160%;height:90%;left:-30%;top:55%;border-top:1px solid #d9ae52;border-radius:50%;transform:rotate(-12deg);box-shadow:0 -5px 0 #d9ae5233,0 -10px 0 #d9ae5226,0 -15px 0 #d9ae521a}.portal-visa>*{position:relative}.portal-login-photo{background:linear-gradient(90deg,#030c16f5,#030c16c9 55%,#030c1677),url('/media/merchant.webp') center/cover}.portal-sidebar nav a{font-size:12px}.portal-sidebar nav svg{width:16px;height:16px}
+
+/* FACEPAY v3 · approved October 2026 */
+:root{--gold:#D4AF37;--midnight:#0E1A2B;--canvas:#F5F5F5;--gold-ink:#7A5C00;--rule:#E3E3E3}
+body,h1,h2,h3,h4,button,input,select{font-family:Poppins,system-ui,sans-serif}
+.btn-gold,.dev-button.gold{background:#D4AF37;color:#0B0B0B;box-shadow:none}
+.reference-header,.portal-sidebar{background:#0B0B0B!important}
+.portal-customer-promo{background:radial-gradient(ellipse at 100% 120%,#D4AF3730,transparent 65%),#0B0B0B}
+.reference-light{background:#F5F5F5;color:#0B0B0B}
+.reference-light .eyebrow,.dev-eyebrow{color:#7A5C00}
+:focus-visible{outline-color:#D4AF37}

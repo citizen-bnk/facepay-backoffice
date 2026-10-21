@@ -141,7 +141,7 @@ export function VisaCard({ last4 = "1234", className = "" }: { last4?: string; c
     <div className={`portal-visa relative overflow-hidden rounded-xl p-5 text-white shadow-card ${className}`} role="img" aria-label={`FacePay virtual Visa card ending ${last4}`}>
       <div className="flex items-center justify-between">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo-full.png" alt="" className="h-7 w-auto" />
+        <img src="/brand/facepay_logo_compact_dark.png" alt="" className="h-7 w-auto" />
         <span className="rounded bg-gold-gradient px-1.5 py-0.5 text-[10px] font-bold text-midnight">NFC</span>
       </div>
       <p className="mt-1 text-[10px] uppercase tracking-widest text-slate-300">Virtual Card</p>

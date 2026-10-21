@@ -14,7 +14,7 @@ export default function LoginPage() {
       <main id="main" className="relative mx-auto grid min-h-screen max-w-6xl items-center gap-10 px-4 py-10 lg:grid-cols-2">
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-full.png" alt="FacePay" className="h-14 w-auto" />
+          <img src="/brand/facepay_logo_compact_dark.png" alt="FacePay" className="h-14 w-auto" />
           <h1 className="mt-8 text-3xl font-bold leading-tight sm:text-4xl">One login. <span className="bg-gold-gradient bg-clip-text text-transparent">Every portal.</span></h1>
           <p className="mt-4 max-w-md text-slate-300">Customers, merchants, operations and super users sign in here. You land in the portal your role allows, with the navigation and data your role is permitted to see.</p>
           <p className="mt-8 text-xs font-semibold tracking-[0.3em] text-gold-light">FACE YOUR MONEY</p>
